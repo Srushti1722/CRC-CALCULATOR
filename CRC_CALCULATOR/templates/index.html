@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRC Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CRC Calculator</h1>
+        <form id="crc-form">
+            <label for="data">Binary Data:</label>
+            <input type="text" id="data" name="data" required>
+            
+            <label for="generator">Generator Polynomial:</label>
+            <input type="text" id="generator" name="generator" required>
+            
+            <button type="submit">Calculate CRC</button>
+        </form>
+
+        <div id="result">
+            <h2>Result</h2>
+            <p id="output"></p>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('crc-form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const response = await fetch('/calculate', {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
+            const output = document.getElementById('output');
+            
+            if (result.error) {
+                output.innerHTML = `<span style="color: red;">${result.error}</span>`;
+            } else {
+                output.innerHTML = `
+                    <strong>Input Data:</strong> ${result.data}<br>
+                    <strong>Generator Polynomial:</strong> ${result.generator}<br>
+                    <strong>CRC Checksum:</strong> ${result.crc}<br>
+                    <strong>Transmitted Frame:</strong> ${result.transmitted_frame}
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
