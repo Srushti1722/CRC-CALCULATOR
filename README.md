@@ -39,7 +39,7 @@ This web app lets you **experiment with CRC calculations** in a simple, intuitiv
 
 ### 1️⃣ Install & Run Locally  
 ```bash
-git clone https://github.com/your-username/crc-calculator.git
+git clone https://github.com/Srushti1722/CRC-CALCULATOR.git
 cd crc-calculator
 pip install flask
 python app.py
@@ -57,7 +57,10 @@ Generator:    1011
 #### ✅ Output:  
 ```
 CRC Checksum:      100  
-Transmitted Frame: 1101011011100  
+Transmitted Frame: 1101011011100
+
+![image](https://github.com/user-attachments/assets/b2bea92f-19b3-48d9-86b8-76d301c90748)
+
 ```  
 
 ## 🌍 Real-World Uses  
@@ -77,7 +80,8 @@ Transmitted Frame: 1101011011100
 🔹 **Tech Enthusiasts** – Explore data integrity & networking concepts  
 
 ## 👥 Contributors  
-👨‍💻 **Your Name** – Developer  
+👨‍💻 **SRUSHTI**  
+
 
 ## 📜 License  
 
