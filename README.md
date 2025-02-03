@@ -59,9 +59,9 @@ Generator:    1011
 CRC Checksum:      100  
 Transmitted Frame: 1101011011100
 
-![image](https://github.com/user-attachments/assets/b2bea92f-19b3-48d9-86b8-76d301c90748)
 
 ```  
+![image](https://github.com/user-attachments/assets/09c03cbe-3653-4f61-bcc3-82b9bafe4cf0)
 
 ## 🌍 Real-World Uses  
 🚀 **Networking:** Detects errors in Ethernet, Wi-Fi, and Bluetooth  
